@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './fonts/San-Francisco-Pro-Fonts/SF-Pro-Display-Light.otf';
+import './fonts/San-Francisco-Pro-Fonts/SF-Pro-Display-Thin.otf';
+import './fonts/San-Francisco-Pro-Fonts/SF-Pro-Display-ThinItalic.otf';
+import './fonts/San-Francisco-Pro-Fonts/SF-Pro-Display-Semibold.otf';
+
 
 ReactDOM.render(
   <React.StrictMode>
