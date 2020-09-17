@@ -1,0 +1,16 @@
+.constellation-row {
+    display: flex;
+    flex-direction: row;
+    width: 110%;
+}
+
+.constellation-column {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 400vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    top: 0;
+}

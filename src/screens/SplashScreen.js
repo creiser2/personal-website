@@ -1,7 +1,10 @@
 import React from 'react';
 import '../styles/SplashScreen.css';
-import Constellations from "../shared/Constellations";
 import { Fragment } from 'react';
+
+import Constellations from "../shared/Constellations";
+
+
 function SplashScreen() {
     return (
         <Fragment>

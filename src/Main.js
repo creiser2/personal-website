@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component, Fragment } from 'react';
 import SplashScreen from "./screens/SplashScreen";
+import Website from "./screens/Website";
 
 class Main extends Component {
     state = {
@@ -16,7 +17,7 @@ class Main extends Component {
             this.setState({
                 isLoading: false
             })
-        }, 500000)
+        }, 5000)
     }
 
     render() {
@@ -25,7 +26,7 @@ class Main extends Component {
                 {this.state.isLoading ? 
                     <SplashScreen />
                 :
-                    <div>main</div>
+                    <Website />
                 }
             </Fragment>
         )
