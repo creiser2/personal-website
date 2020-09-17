@@ -2,23 +2,34 @@ import React from 'react';
 import { Component, Fragment } from 'react';
 
 import Constellations from "../shared/Constellations";
+import { LandingPage, AboutMePage, WorkTimelinePage, ContactMePage } from "./PagesIndex";
 
 class Website extends Component {
+    constructor(props) {
+        super(props);
+        this.aboutMePageRef = React.createRef();
+    }
+
     componentDidMount() {
         document.body.style = ""
     }
 
+    scrollToAboutMe() {
+        window.scrollTo({
+            top: this.aboutMePageRef.current._reactInternalFiber.child.stateNode.offsetTop,
+            left: 0,
+            behavior: 'smooth'
+        });
+    } 
+
     render() {
         return (
             <Fragment>
-                <div className='bg1'>
-                    <div className='bg2'>
-                    </div>
-                </div>
-                < Constellations />
-                <div className='splash-text sf-semibold center-xy'>
-                    Main
-                </div>
+                <Constellations />
+                <LandingPage aboutMeClicked={() => this.scrollToAboutMe()}/>
+                <AboutMePage ref={this.aboutMePageRef} />
+                <WorkTimelinePage />
+                <ContactMePage />
             </Fragment>
         )
     }

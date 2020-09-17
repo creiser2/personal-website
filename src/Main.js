@@ -17,12 +17,16 @@ class Main extends Component {
             this.setState({
                 isLoading: false
             })
-        }, 5000)
+        }, 0)
     }
 
     render() {
         return (
             <Fragment>
+                <div className='bg1'>
+                    <div className='bg2'>
+                    </div>
+                </div>
                 {this.state.isLoading ? 
                     <SplashScreen />
                 :
