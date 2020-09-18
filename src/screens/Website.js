@@ -2,7 +2,7 @@ import React from 'react';
 import { Component, Fragment } from 'react';
 
 import Constellations from "../shared/Constellations";
-import { LandingPage, AboutMePage, WorkTimelinePage, ContactMePage } from "./PagesIndex";
+import { LandingPage, AboutMePage, WorkTimelinePage, ContactMePage } from "../indices/PagesIndex";
 
 class Website extends Component {
     constructor(props) {

@@ -1,0 +1,44 @@
+.sv-row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow: hidden;
+    align-items: center;
+    height: 100%;
+}
+
+.sv-col-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.sc-large-img {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 60%;
+}
+
+.sc-small-img {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 30%;
+}
+
+.sc-medium-img {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 40%;
+}
+
+.sc-small-medium-img {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 35%; 
+}
+
+.stack-cell-text {
+    color: white;
+    font-size: 1.5rem;
+}
