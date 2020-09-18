@@ -1,4 +1,4 @@
-.work-timeline-container {
+.wt-container {
     position: absolute;
     border: white;
     border-width: 1px;
@@ -7,4 +7,126 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+}
+
+.wt-carousel-container {
+    width: 80%;
+    height: 83%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.wt-header-holder {
+    height: 15%;
+    width: 100%;
+}
+
+.wt-carousel-logo {
+    height: 18%;
+}
+
+.wt-carousel-main {
+    height: 65%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wt-carousel-app-name {
+    height: 5%;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.wt-scroll-container {
+    height: 12%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.wt-left-chevron {
+    height: 40%;
+    transform: rotate(90deg)
+}
+
+.wt-right-chevron {
+    height: 40%;
+    transform: rotate(270deg);
+}
+
+.wt-time-container {
+    width: 25%;
+    color: white;
+    font-size: 2rem;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.wt-carousel-display-cq-1 {
+    width: 30%;
+}
+
+.wt-carousel-display-cq-2 {
+    width: 38%;
+}
+
+.wt-carousel-display-cq-3 {
+    width: 30%;
+}
+
+.wt-carousel-display-jr-1 {
+    width: 39%;
+}
+
+.wt-carousel-display-jr-2 {
+    width: 15%;
+}
+
+.wt-carousel-display-jr-3 {
+    width: 38%;
+}
+
+.wt-carousel-special-icon-holder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.wt-carousel-plus {
+    color: white;
+    font-size: 2rem;
+}
+
+.wt-carousel-icon {
+    width: 10%;
+    padding-right: 7%;
+    padding-left: 7%;
+}
+
+.wt-carousel-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.wt-carousel-button-container {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
 }
