@@ -4,17 +4,16 @@ import { Fragment, Component } from "react";
 import "../styles/ContactMePage.css";
 
 class ContactMePage extends Component {
-
-    downChevronClicked() {
-        // this.props.secondPageRef.scrollIntoView();
-        //this.refs.hello.scrollIntoView(); 
-    }
-
     render() {
         return (
             <Fragment>
                 <div className="contact-me-container">
-
+                    <div className="wt-header-holder">
+                        <div style={{ height: '25%' }} />
+                        <div className="sf-semibold am-header">
+                            Contact Me
+                        </div>
+                    </div>
                 </div>
             </Fragment>
         )

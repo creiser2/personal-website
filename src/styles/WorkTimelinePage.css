@@ -56,12 +56,14 @@
 
 .wt-left-chevron {
     height: 40%;
-    transform: rotate(90deg)
+    transform: rotate(90deg);
+    cursor: pointer;
 }
 
 .wt-right-chevron {
     height: 40%;
     transform: rotate(270deg);
+    cursor: pointer;
 }
 
 .wt-time-container {
