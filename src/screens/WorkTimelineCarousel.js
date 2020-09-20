@@ -18,9 +18,45 @@ import {
     railsImg
 } from "../indices/StackImagesIndex"
 
-import chevron from "../assets/chevron.png";
+function scrollToWindow(oldWindow, newWindow) {
+    if(oldWindow === newWindow) {
+        return;
+    }
+
+    let container = document.getElementById("carousel-root")
+    container.scrollTo({
+        top: 0,
+        left: window.innerWidth*newWindow,
+        behavior: "smooth"
+    })
+}
 
 function WorkTimelineCarousel(props) {
+    const renderDisplays = () => {
+        let carousel = [];
+        props.displays.forEach(display => {
+            carousel.push(
+                <Fragment>
+                    <div className="wt-carousel-container">
+                        <div className="wt-carousel-window">
+                            {renderDisplay(display.id)}
+                        </div>
+                    </div>
+                </Fragment>
+            )
+        })
+
+        return (
+            carousel
+        )
+    }
+    const [window, setWindow] = React.useState(props.window)
+
+    React.useEffect(() => {
+        setWindow(props.window)
+        scrollToWindow(window, props.window)
+    }, [props.window, window])
+
     const renderDisplay = (display) => {
         switch(display) {
             case 0:
@@ -34,10 +70,6 @@ function WorkTimelineCarousel(props) {
         }
     }
 
-    const gotoUrl = (url) => {
-        window.open(url)
-    }
-
     const renderFlatironDisplay = () => {
         return (
             <Fragment>
@@ -49,11 +81,11 @@ function WorkTimelineCarousel(props) {
                         </div> 
                         <div style={{height: '15%'}} />
                         <div className="wt-carousel-button-container">
-                            <div id="development" className="am-button-hollow sf-light" onClick={() => gotoUrl("https://mmash.herokuapp.com/")}>
+                            <div id="development" className="am-button-hollow sf-light" onClick={() => window.open("https://mmash.herokuapp.com/")}>
                                 Monster Mash
                             </div>
                             <div className="am-spacer-2"></div>
-                            <div id="deployment" className="am-button-hollow sf-light" onClick={() => gotoUrl("https://shreddit-forums.herokuapp.com/")}>
+                            <div id="deployment" className="am-button-hollow sf-light" onClick={() => window.open("https://shreddit-forums.herokuapp.com/")}>
                                 Shreddit
                             </div>
                         </div>
@@ -66,10 +98,10 @@ function WorkTimelineCarousel(props) {
                             <img src={railsImg} alt="rails" className="wt-carousel-icon"/>
                         </div>
                         <div style={{ height: '15%' }} />
-                        <div className="wt-carousel-app-name sf-light">
-                            Full Stack Web Application Development
-                        </div>
                     </div>
+                </div>
+                <div className="wt-carousel-app-name sf-light">
+                    Full Stack Web Application Development
                 </div>
             </Fragment>
         ) 
@@ -80,10 +112,11 @@ function WorkTimelineCarousel(props) {
             <Fragment>
                 <img src={JuiceLogo} alt="juice-reel" className="wt-carousel-logo" />
                 <div className="wt-carousel-main">
-                    <img src={JuiceFirstDisplay} className="wt-carousel-display-jr-1" alt="cranberry-display-1" />
-                    <img src={JuiceSecondDisplay} className="wt-carousel-display-jr-2" alt="cranberry-display-2" />
-                    <img src={JuiceThirdDisplay} className="wt-carousel-display-jr-3" alt="cranberry-display-3" />
+                    <img src={JuiceFirstDisplay} className="wt-carousel-display-jr-1" alt="juice-display-1" />
+                    <img src={JuiceSecondDisplay} className="wt-carousel-display-jr-2" alt="juice-display-2" />
+                    <img src={JuiceThirdDisplay} className="wt-carousel-display-jr-3" alt="juice-display-3" />
                 </div>
+                <div style={{height: '10%'}} />
                 <div className="wt-carousel-app-name sf-light">
                     Juice Reel
                 </div>
@@ -108,23 +141,8 @@ function WorkTimelineCarousel(props) {
     }
 
     return (
-        <div className="wt-carousel-container">
-            {renderDisplay(props.display.index)}
-            <div className="wt-scroll-container">
-                {props.display.index !== 0 ? 
-                    <img src={chevron} alt="leftChevron" className="wt-left-chevron" onClick={() => props.leftChevronClicked()} />
-                :
-                    <img src={chevron} style={{visibility: "hidden"}} alt="leftChevron" className="wt-left-chevron" />
-                }
-                <div className="wt-time-container sf-thin">
-                    {props.display.time}
-                </div>
-                {props.display.end ? 
-                    <img src={chevron} style={{ visibility: "hidden" }} alt="rightChevron" className="wt-right-chevron" />
-                :
-                    <img src={chevron} alt="rightChevron" className="wt-right-chevron" onClick={() => props.rightChevronClicked()} />
-                }
-            </div>
+        <div id="carousel-root" className="wt-carousel-root">
+            {renderDisplays()}
         </div>
     )
 }

@@ -3,46 +3,39 @@ import { Fragment, Component } from "react";
 
 import "../styles/WorkTimelinePage.css";
 import WorkTimelineCarousel from "./WorkTimelineCarousel";
+import Chevron from "../shared/Chevron";
 
 class WorkTimelinePage extends Component {
-    displays = [
-        {
-            index: 0,
-            name: "Juice Reel",
-            time: "2020 - Present"
-        },
-        {
-            index: 1,
-            name: "Cranberry Queues",
-            time: "2019 - Present"
-        },
-        {
-            index: 2,
-            name: "Flatiron School",
-            time: "Summer 2018",
-            end: true
-        }
-    ]
-
     state = {
-        display: 2
+        window: 0,
+        displays: [
+            {
+                id: 0,
+                name: "Juice Reel",
+                time: "2020 - Present"
+            },
+            {
+                id: 1,
+                name: "Cranberry Queues",
+                time: "2019 - Present"
+            },
+            {
+                id: 2,
+                name: "Flatiron School",
+                time: "Summer 2018",
+            } 
+        ]
     }
 
     leftChevronClicked = () => {
-        if(this.state.display === 0) {
-            return
-        }
         this.setState({
-            display: this.state.display - 1
+            window: this.state.window - 1
         })
     }
 
     rightChevronClicked = () => {
-        if(this.state.display === this.displays.length-1) {
-            return
-        }
         this.setState({
-            display: this.state.display + 1
+            window: this.state.window + 1
         })
     }
 
@@ -56,7 +49,22 @@ class WorkTimelinePage extends Component {
                             Work Timeline
                         </div>
                     </div>
-                    <WorkTimelineCarousel leftChevronClicked={this.leftChevronClicked} rightChevronClicked={this.rightChevronClicked} display={this.displays[this.state.display]}/>
+                    <WorkTimelineCarousel displays={this.state.displays} window={this.state.window}/>
+                    <div className="wt-scroll-container">
+                        {this.state.window === 0 ? 
+                            <Chevron className={"wt-left-chevron hidden"} clickEvent={() => this.leftChevronClicked()} />
+                        :
+                            <Chevron className={"wt-left-chevron"} clickEvent={() => this.leftChevronClicked()} />
+                        }
+                        <div className="wt-time-container sf-thin">
+                            {this.state.displays[this.state.window].time}
+                        </div>
+                        {this.state.window !== this.state.displays.length -1 ?
+                            <Chevron className={"wt-right-chevron"} clickEvent={() => this.rightChevronClicked()} />
+                         :
+                            <Chevron className={"wt-right-chevron hidden"} clickEvent={() => this.rightChevronClicked()} />
+                        } 
+                    </div>
                 </div>
             </Fragment>
         )

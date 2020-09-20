@@ -1,7 +1,7 @@
 import React from "react";
 import { Fragment, Component } from "react";
 import '../styles/LandingPage.css';
-import downChevron from "../assets/chevron.png"
+import Chevron from "../shared/Chevron";
 
 class LandingPage extends Component {
     render() {
@@ -17,7 +17,7 @@ class LandingPage extends Component {
                             Software Engineer
                     </div>
                         <div className="midSpacer" />
-                        <img src={downChevron} alt="down" className="downChevron" onClick={this.props.aboutMeClicked} />
+                        <Chevron className="downChevron" direction="down" clickEvent={this.props.aboutMeClicked}/>
                         <div className="bottomSpacer" />
                     </div>
                 </div>

@@ -50,7 +50,6 @@ class Website extends Component {
         const lastScrollY = window.scrollY;
         const threshold = 250;
         
-        return;
         if (Math.abs(this.state.refs.landingPageRef.current._reactInternalFiber.child.stateNode.offsetTop - lastScrollY) <= threshold) {
             this.scrollToLandingPage()
         } else if (Math.abs(this.state.refs.aboutMePageRef.current._reactInternalFiber.child.stateNode.offsetTop - lastScrollY) <= threshold) {

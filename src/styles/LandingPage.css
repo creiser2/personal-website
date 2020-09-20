@@ -48,6 +48,7 @@
     margin-right: auto;
     width: 65px;
     cursor: pointer;
+    opacity: 0.7;
 }
 
 .downChevronHolder {
