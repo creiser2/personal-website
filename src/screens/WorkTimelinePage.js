@@ -27,6 +27,11 @@ class WorkTimelinePage extends Component {
         ]
     }
 
+    goToUrl = (url) => {
+        debugger;
+        window.open(url)
+    }
+
     leftChevronClicked = () => {
         this.setState({
             window: this.state.window - 1
@@ -49,7 +54,7 @@ class WorkTimelinePage extends Component {
                             Work Timeline
                         </div>
                     </div>
-                    <WorkTimelineCarousel displays={this.state.displays} window={this.state.window}/>
+                    <WorkTimelineCarousel displays={this.state.displays} window={this.state.window} goToUrl={(url) => this.goToUrl(url)}/>
                     <div className="wt-scroll-container">
                         {this.state.window === 0 ? 
                             <Chevron className={"wt-left-chevron hidden"} clickEvent={() => this.leftChevronClicked()} />

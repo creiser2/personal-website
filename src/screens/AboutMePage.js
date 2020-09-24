@@ -1,14 +1,15 @@
 import React from "react";
 import { Fragment, Component } from "react";
 
-import StackView from "./StackView";
+import CustomButtonHolder from "../shared/CustomButtonHolder";
+import DevelopmentStackView from "./DevelopmentStackView";
+import DeploymentStackView from "./DeploymentStackView";
 import profilePicture from "../assets/profilePicture.png"
 import "../styles/AboutMePage.css";
 
 class AboutMePage extends Component {
     state = {
-        developmentClicked: true,
-        set: 3
+        developmentClicked: true
     }
 
     deploymentClick = () => {
@@ -46,15 +47,11 @@ class AboutMePage extends Component {
                                     Development
                                 </div>
                                 <div className="am-spacer-2"></div>
-                                <div id="deployment" className="am-button-hollow sf-light" onClick={() => this.deploymentClick()}>
-                                    Deployment
-                                </div>
+                                <CustomButtonHolder text={"Deployment"} clickEvent={() => this.deploymentClick()} />
                             </Fragment>
                         :
                             <Fragment>
-                                <div id="development" className="am-button-hollow sf-light" onClick={() => this.developmentClick()}>
-                                    Development
-                                </div>
+                                <CustomButtonHolder text={"Development"} clickEvent={() => this.developmentClick()} />
                                 <div className="am-spacer-2"></div>
                                 <div id="deployment" className="am-button-filled sf-light" onClick={() => this.deploymentClick()}>
                                     Deployment
@@ -66,7 +63,10 @@ class AboutMePage extends Component {
                         <img src={profilePicture} alt="profile" className="profile-picture" onClick={this.props.aboutMeClicked} />
                         <div className="am-spacer-3" />
                         <div className="stack">
-                            <StackView developmentClicked={this.state.developmentClicked} set={this.state.set} />
+                            <div className="stack-dev-deploy-container">
+                                <DevelopmentStackView active={this.state.developmentClicked} />
+                                <DeploymentStackView active={!this.state.developmentClicked} /> 
+                            </div>
                         </div>
                     </div>
                 </div>

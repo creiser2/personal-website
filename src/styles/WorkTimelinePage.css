@@ -33,6 +33,11 @@
     font-size: 2rem;
 }
 
+.wt-carousel-app-name:hover {
+    color: rgba(80, 80, 245, 0.774);
+    cursor: pointer;
+}
+
 .wt-scroll-container {
     height: 12%;
     width: 75%;
@@ -43,6 +48,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    user-select: none;
 }
 
 .wt-left-chevron {
@@ -60,7 +66,7 @@
 .wt-time-container {
     width: 25%;
     color: white;
-    font-size: 3rem;
+    font-size: 2.3vw;
     padding-left: 7px;
     padding-right: 7px;
 }

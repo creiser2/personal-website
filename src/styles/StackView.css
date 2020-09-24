@@ -4,6 +4,7 @@
     justify-content: space-evenly;
     overflow: hidden;
     align-items: center;
+    position: absolute;
     height: 100%;
 }
 
@@ -40,5 +41,11 @@
 
 .stack-cell-text {
     color: white;
-    font-size: 1.5rem;
+    font-size: 2vw;
+}
+
+.stack-dev-deploy-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }

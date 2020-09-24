@@ -1,6 +1,8 @@
 import React from 'react';
 import { Fragment } from 'react';
 
+import CustomButtonHolder from "../shared/CustomButtonHolder";
+
 import {
     CranberryLogo,
     JuiceLogo,
@@ -70,6 +72,14 @@ function WorkTimelineCarousel(props) {
         }
     }
 
+    const mouseEnter = () => {
+
+    }
+
+    const mouseLeave = () => {
+
+    }
+
     const renderFlatironDisplay = () => {
         return (
             <Fragment>
@@ -81,13 +91,9 @@ function WorkTimelineCarousel(props) {
                         </div> 
                         <div style={{height: '15%'}} />
                         <div className="wt-carousel-button-container">
-                            <div id="development" className="am-button-hollow sf-light" onClick={() => window.open("https://mmash.herokuapp.com/")}>
-                                Monster Mash
-                            </div>
+                            <CustomButtonHolder text={"Monster Mash"} clickEvent={() => props.goToUrl("https://mmash.herokuapp.com/")} />
                             <div className="am-spacer-2"></div>
-                            <div id="deployment" className="am-button-hollow sf-light" onClick={() => window.open("https://shreddit-forums.herokuapp.com/")}>
-                                Shreddit
-                            </div>
+                            <CustomButtonHolder text={"Shreddit"} clickEvent={() => props.goToUrl("https://shreddit-forums.herokuapp.com/")} />
                         </div>
                         <div style={{ height: '15%' }} />
                         <div className="wt-carousel-special-icon-holder">
@@ -100,7 +106,7 @@ function WorkTimelineCarousel(props) {
                         <div style={{ height: '15%' }} />
                     </div>
                 </div>
-                <div className="wt-carousel-app-name sf-light">
+                <div className="wt-carousel-app-name sf-light" clickEvent={() => props.goToUrl("https://flatironschool.com/career-courses/coding-bootcamp")}>
                     Full Stack Web Application Development
                 </div>
             </Fragment>
@@ -116,8 +122,7 @@ function WorkTimelineCarousel(props) {
                     <img src={JuiceSecondDisplay} className="wt-carousel-display-jr-2" alt="juice-display-2" />
                     <img src={JuiceThirdDisplay} className="wt-carousel-display-jr-3" alt="juice-display-3" />
                 </div>
-                <div style={{height: '10%'}} />
-                <div className="wt-carousel-app-name sf-light">
+                <div className="wt-carousel-app-name sf-light" onClick={() => props.goToUrl("https://apps.apple.com/us/app/juice-reel/id1527960097")}>
                     Juice Reel
                 </div>
             </Fragment>
@@ -133,7 +138,7 @@ function WorkTimelineCarousel(props) {
                     <img src={CranberrySecondDisplay} className="wt-carousel-display-cq-2" alt="cranberry-display-2" />
                     <img src={CranberryThirdDisplay} className="wt-carousel-display-cq-3" alt="cranberry-display-3" />
                 </div>
-                <div className="wt-carousel-app-name sf-light">
+                <div className="wt-carousel-app-name sf-light" onClick={() => props.goToUrl("https://apps.apple.com/us/app/cranberry-queues/id1484019324")}>
                     Cranberry Queues
                 </div>
             </Fragment>
