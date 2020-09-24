@@ -1,6 +1,5 @@
 import React from "react";
 import { Fragment, Component } from "react";
-import Stack from "./Stack";
 import "../styles/StackView.css";
 
 import {
@@ -24,7 +23,7 @@ class DevelopmentStackView extends Component {
     numSets = 3;
     state = {
         set: 0,
-        rotating: true,
+        rotating: false,
         sets: [this.s1, this.s2, this.s3]
     }
 
@@ -37,7 +36,7 @@ class DevelopmentStackView extends Component {
                 })
             }
             this.rotateStack()
-        }, 5000)
+        }, this.props.rotateSpeed)
     }
 
     renderDevelopmentStack() {

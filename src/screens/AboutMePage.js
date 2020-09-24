@@ -64,8 +64,8 @@ class AboutMePage extends Component {
                         <div className="am-spacer-3" />
                         <div className="stack">
                             <div className="stack-dev-deploy-container">
-                                <DevelopmentStackView active={this.state.developmentClicked} />
-                                <DeploymentStackView active={!this.state.developmentClicked} /> 
+                                <DevelopmentStackView rotateSpeed={10000} active={this.state.developmentClicked} />
+                                <DeploymentStackView rotateSpeed={10000} active={!this.state.developmentClicked} /> 
                             </div>
                         </div>
                     </div>

@@ -72,14 +72,6 @@ function WorkTimelineCarousel(props) {
         }
     }
 
-    const mouseEnter = () => {
-
-    }
-
-    const mouseLeave = () => {
-
-    }
-
     const renderFlatironDisplay = () => {
         return (
             <Fragment>
@@ -106,7 +98,7 @@ function WorkTimelineCarousel(props) {
                         <div style={{ height: '15%' }} />
                     </div>
                 </div>
-                <div className="wt-carousel-app-name sf-light" clickEvent={() => props.goToUrl("https://flatironschool.com/career-courses/coding-bootcamp")}>
+                <div className="wt-carousel-app-name sf-light" onClick={() => props.goToUrl("https://flatironschool.com/career-courses/coding-bootcamp")}>
                     Full Stack Web Application Development
                 </div>
             </Fragment>

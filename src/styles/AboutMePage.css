@@ -1,8 +1,5 @@
 .am-container {
     position: absolute;
-    border: white;
-    border-width: 1px;
-    border-style: inset;
     top: 100vh;
     width: 100%;
     height: 100vh;

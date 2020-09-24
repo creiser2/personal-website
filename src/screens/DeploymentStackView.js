@@ -1,6 +1,5 @@
 import React from "react";
 import { Fragment, Component } from "react";
-import Stack from "./Stack";
 import "../styles/StackView.css";
 
 import {
@@ -34,7 +33,7 @@ class DeploymentStackView extends Component {
                 })
             }
             this.rotateStack()
-        }, 5000)
+        }, this.props.rotateSpeed)
     }
 
 

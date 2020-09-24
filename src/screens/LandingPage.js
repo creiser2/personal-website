@@ -2,6 +2,7 @@ import React from "react";
 import { Fragment, Component } from "react";
 import '../styles/LandingPage.css';
 import Chevron from "../shared/Chevron";
+import Constellations from "../shared/Constellations";
 
 class LandingPage extends Component {
     render() {
