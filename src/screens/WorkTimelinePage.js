@@ -4,6 +4,7 @@ import { Fragment, Component } from "react";
 import "../styles/WorkTimelinePage.css";
 import WorkTimelineCarousel from "./WorkTimelineCarousel";
 import Chevron from "../shared/Chevron";
+import Constellations from "../shared/Constellations";
 
 class WorkTimelinePage extends Component {
     state = {
@@ -48,6 +49,7 @@ class WorkTimelinePage extends Component {
         return (
             <Fragment>
                 <div className="wt-container">
+                    <Constellations page={3}/>
                     <div className="wt-header-holder">
                         <div style={{height: '25%'}} />
                         <div className="sf-semibold am-header">

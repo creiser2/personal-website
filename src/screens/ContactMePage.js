@@ -4,6 +4,7 @@ import ContactMeForm from "./ContactMeForm";
 import "../styles/ContactMePage.css";
 import Button from '@material-ui/core/Button';
 import GetAppIcon from '@material-ui/icons/GetApp';
+import Constellations from "../shared/Constellations";
 
 class ContactMePage extends Component {
     downloadResume = () => {
@@ -14,6 +15,7 @@ class ContactMePage extends Component {
         return (
             <Fragment>
                 <div className="cm-container">
+                    <Constellations page={4}/>
                     <div className="wt-header-holder">
                         <div style={{ height: '25%' }} />
                         <div className="sf-semibold am-header">

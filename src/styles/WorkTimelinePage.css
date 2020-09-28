@@ -9,6 +9,7 @@
 .wt-header-holder {
     height: 15%;
     width: 100%;
+    position: relative;
 }
 
 .wt-carousel-logo {
@@ -46,6 +47,7 @@
     justify-content: center;
     text-align: center;
     user-select: none;
+    position: relative;
 }
 
 .wt-left-chevron {
@@ -136,6 +138,7 @@
     flex-wrap: nowrap;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
+    position: relative;
 }
 
 .wt-carousel-root::-webkit-scrollbar {

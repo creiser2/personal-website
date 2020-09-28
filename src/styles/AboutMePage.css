@@ -9,6 +9,7 @@
 .am-text-holder {
     height: 25%;
     width: 100%;
+    position: relative;
 }
 
 .am-header {
@@ -37,6 +38,7 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 .am-button-filled {
@@ -84,6 +86,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .profile-picture {

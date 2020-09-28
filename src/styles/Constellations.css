@@ -1,16 +1,13 @@
 .constellation-row {
     display: flex;
     flex-direction: row;
-    width: 110%;
 }
 
 .constellation-column {
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 110vw;
-    height: 400vh;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    width: 2000px;
+    height: 2000px;
     top: 0;
 }

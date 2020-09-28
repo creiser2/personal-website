@@ -1,7 +1,6 @@
 import React from 'react';
 import { Component, Fragment } from 'react';
 
-import Constellations from "../shared/Constellations";
 import { LandingPage, AboutMePage, WorkTimelinePage, ContactMePage } from "../indices/PagesIndex";
 
 class Website extends Component {
@@ -18,7 +17,8 @@ class Website extends Component {
                 aboutMePageRef: null,
                 workTimelinePageRef: null,
                 contactMePageRef: null,
-            }
+            },
+            scrollControlEnabled: false
         }
     }
 
@@ -26,23 +26,25 @@ class Website extends Component {
         document.body.style = ""
         
         var timer = null;
-        window.addEventListener('scroll', () => {
-            if (timer !== null) {
-                clearTimeout(timer);
-            }
-            timer = setTimeout(() => {
-                this.handleScroll()
-            }, 50);
-        }, false);
+        if(this.state.scrollControlEnabled) {
+            window.addEventListener('scroll', () => {
+                if (timer !== null) {
+                    clearTimeout(timer);
+                }
+                timer = setTimeout(() => {
+                    this.handleScroll()
+                }, 50);
+            }, false);
 
-        this.setState({
-            refs: {
-                landingPageRef: this.landingPageRef,
-                aboutMePageRef: this.aboutMePageRef,
-                workTimelinePageRef: this.workTimelinePageRef,
-                contactMePageRef: this.contactMePageRef,
-            }
-        })
+            this.setState({
+                refs: {
+                    landingPageRef: this.landingPageRef,
+                    aboutMePageRef: this.aboutMePageRef,
+                    workTimelinePageRef: this.workTimelinePageRef,
+                    contactMePageRef: this.contactMePageRef,
+                }
+            })
+        }
     }
 
     // get the scroll height and the tops of all refs, and see if we are close to one to animate to
@@ -96,7 +98,6 @@ class Website extends Component {
     render() {
         return (
             <Fragment>
-                <Constellations />
                 <LandingPage ref={this.landingPageRef} aboutMeClicked={() => this.scrollToAboutMe()}/>
                 <AboutMePage ref={this.aboutMePageRef} />
                 <WorkTimelinePage ref={this.workTimelinePageRef}/>

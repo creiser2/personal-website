@@ -5,6 +5,7 @@ import CustomButtonHolder from "../shared/CustomButtonHolder";
 import DevelopmentStackView from "./DevelopmentStackView";
 import DeploymentStackView from "./DeploymentStackView";
 import profilePicture from "../assets/profilePicture.png"
+import Constellations from "../shared/Constellations";
 import "../styles/AboutMePage.css";
 
 class AboutMePage extends Component {
@@ -28,6 +29,7 @@ class AboutMePage extends Component {
         return (
             <Fragment>
                 <div className="am-container">
+                    <Constellations page={2}/>
                     <div className="am-text-holder">
                         <div className="am-spacer-1"></div>
                         <div className="sf-semibold am-header">

@@ -9,6 +9,7 @@ class LandingPage extends Component {
         return (
             <Fragment>
                 <div className="landing-page-container"> 
+                    <Constellations page={1} />
                     <div className="center">
                         <div className="topSpacer" />
                         <div className='header sf-semibold'>
