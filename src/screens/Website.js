@@ -101,7 +101,7 @@ class Website extends Component {
                 <LandingPage ref={this.landingPageRef} aboutMeClicked={() => this.scrollToAboutMe()}/>
                 <AboutMePage ref={this.aboutMePageRef} />
                 <WorkTimelinePage ref={this.workTimelinePageRef}/>
-                <ContactMePage ref={this.contactMePageRef}/>
+                <ContactMePage createToast={(options) => this.props.createToast(options)} ref={this.contactMePageRef}/>
             </Fragment>
         )
     }

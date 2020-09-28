@@ -23,7 +23,7 @@ class DevelopmentStackView extends Component {
     numSets = 3;
     state = {
         set: 0,
-        rotating: false,
+        rotating: true,
         sets: [this.s1, this.s2, this.s3]
     }
 

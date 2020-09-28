@@ -85,46 +85,6 @@ class ContactMeForm extends Component {
         }
     }
 
-    componentDidMount() {
-        if (this.props.editMode) {
-            let entryProps = this.props.inputEntry;
-            this.setState({
-                form: {
-                    ...this.state.form,
-                    ...entryProps
-                }
-            });
-        } else {
-            this.setState({
-                form: {
-                    ...this.state.form,
-                    username: this.props.username
-                }
-            })
-        }
-    }
-
-    addEntry = () => {
-        if (!this.props.editMode) {
-            axios.post(`${axios.defaults.baseURL}/api/whitelist`, this.state.form)
-                .then(res => {
-                    this.props.addEntry(res.data);
-                })
-                .catch(err => {
-                    this.props.createToast({ type: "error", message: `error adding entry` })
-                })
-        } else {
-            axios.put(`${axios.defaults.baseURL}/api/whitelist`, this.state.form)
-                .then(res => {
-                    this.props.updateEntry(res.data);
-                })
-                .catch(() => {
-                    this.props.createToast({ type: "error", message: `Failed to update ${this.state.form.username}` })
-                })
-        }
-    }
-
-
     handleSubmit = (e) => {
         e.preventDefault()
         this.setState({
@@ -135,39 +95,65 @@ class ContactMeForm extends Component {
             }
         })
 
+        let errors = {
+            emailOrPhone: false,
+            email: false,
+            phone: false
+        }
+    
+
         // phone number and email are blank
-        if(this.state.form.email === "" && this.state.form.phoneNumber === "") {
-            this.setState({
-                errors: {
-                    ...this.state.errors,
-                    emailOrPhone: true
-                }
-            })
+        if(this.state.form.email === "" || this.state.form.phoneNumber === "") {
+            errors.emailOrPhone = true
         } 
 
         // non blank phone number check
-        if(this.state.form.phoneNumber !== "") {
+        else if (this.state.form.phoneNumber !== "") {
             if (!/\(\d{3}\)\-\d{3}\-\d{4}/.test(this.state.form.phoneNumber)) {
-                this.setState({
-                    errors: {
-                        ...this.state.errors,
-                        phone: true
-                    }
-                })
+                errors.phone = true
             }
         }
 
         // non blank email check
-        if(this.state.form.email !== "") {
+        else if(this.state.form.email !== "") {
             if (!/\w+@\w+\.\w+/.test(this.state.form.email)) {
-                this.setState({
-                    errors: {
-                        ...this.state.errors,
-                        email: true
-                    }
-                })
+                errors.email = true;
             }
         }
+
+        this.setState({
+            ...this.state,
+            errors: errors
+        },
+            this.sendEmail
+        )
+    }
+
+    sendEmail = () => {
+        if(this.state.errors.emailOrPhone || this.state.errors.email || this.state.errors.phone) {
+            this.props.createToast({ message: "Form Failure", type: "error" });
+        } else {
+            this.props.createToast({ message: `Email sent!`, type: "success" });
+            this.resetForm();
+        }
+    }
+
+    resetForm = () => {
+        this.setState(
+            {
+                form: {
+                    name: "",
+                    email: "",
+                    phoneNumber: "",
+                    message: ""
+                },
+                errors: {
+                    emailOrPhone: false,
+                    email: false,
+                    phone: false
+                }
+            }
+        )
     }
 
     handleFieldChange = (event) => {
@@ -281,7 +267,7 @@ class ContactMeForm extends Component {
                 <form autoComplete={"chrome-off"} className={"new-entry-form"} onSubmit={(e) => this.handleSubmit(e)}>
                     <CssTextField
                         onChange={(event) => this.handleFieldChange(event)}
-                        autoComplete={"off"}
+                        autoComplete="new-password"
                         role="presentation"
                         label="Name"
                         variant="outlined"
@@ -290,7 +276,6 @@ class ContactMeForm extends Component {
                     />
                     <CssTextField
                         onChange={(event) => this.handleFieldChange(event)}
-                        autoComplete={"off"}
                         role="presentation"
                         label="Email Address"
                         variant="outlined"
@@ -301,7 +286,7 @@ class ContactMeForm extends Component {
                     />
                     <CssTextField
                         onChange={(event) => this.handleFieldChange(event)}
-                        autoComplete={"off"}
+                        autoComplete="new-password"
                         role="presentation"
                         label="Phone Number"
                         variant="outlined"

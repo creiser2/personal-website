@@ -30,7 +30,7 @@ class Main extends Component {
                 {this.state.isLoading ? 
                     <SplashScreen />
                 :
-                    <Website />
+                    <Website createToast={(options) => this.props.createToast(options)}/>
                 }
             </Fragment>
         )

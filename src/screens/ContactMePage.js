@@ -22,7 +22,7 @@ class ContactMePage extends Component {
                             Contact Me
                         </div>
                     </div>
-                    <ContactMeForm />
+                    <ContactMeForm createToast={(options) => this.props.createToast(options)}/>
                     <div className="cm-download-resume">
                         <Button variant="contained" color="primary" onClick={() => this.downloadResume()}>
                             Resume.pdf
