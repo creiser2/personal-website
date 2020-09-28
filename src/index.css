@@ -12,43 +12,6 @@ code {
     monospace;
 }
 
-/* import fonts */
-@font-face {
-  font-family: 'SF-Pro-Display-Light';
-  src: local('SF-Pro-Display-Light'), url(./fonts/San-Francisco-Pro-Fonts/SF-Pro-Display-Light.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'SF-Pro-Display-Thin';
-  src: local('SF-Pro-Display-Thin'), url(./fonts/San-Francisco-Pro-Fonts/SF-Pro-Display-Thin.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'SF-Pro-Display-ThinItalic';
-  src: local('SF-Pro-Display-ThinItalic'), url(./fonts/San-Francisco-Pro-Fonts/SF-Pro-Display-ThinItalic.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'SF-Pro-Display-Semibold';
-  src: local('SF-Pro-Display-Semibold'), url(./fonts/San-Francisco-Pro-Fonts/SF-Pro-Display-Semibold.otf) format('opentype');
-}
-
-.sf-light {
-    font-family: SF-Pro-Display-Light;
-}
-
-.sf-thin {
-    font-family: SF-Pro-Display-Thin;
-}
-
-.sf-thin-italic {
-    font-family: SF-Pro-Display-ThinItalic;
-}
-
-.sf-semibold {
-    font-family: SF-Pro-Display-Semibold;
-}
-
 /* background */
 .bg1 {
   width: 100%;
