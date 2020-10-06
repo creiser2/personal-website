@@ -5,6 +5,7 @@ import "../styles/ContactMePage.css";
 import Button from '@material-ui/core/Button';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import Constellations from "../shared/Constellations";
+import { awsSes, awsAmplify, reactImg, awsLambdaImg } from "../indices/StackImagesIndex";
 
 class ContactMePage extends Component {
     downloadResume = () => {
@@ -16,18 +17,35 @@ class ContactMePage extends Component {
             <Fragment>
                 <div className="cm-container">
                     <Constellations page={4}/>
-                    <div className="wt-header-holder">
-                        <div style={{ height: '25%' }} />
-                        <div className="sf-semibold am-header">
-                            Contact Me
+                    <div className="cm-body-container">
+                        <div className="wt-header-holder">
+                            <div style={{ height: '25%' }} />
+                            <div className="sf-semibold am-header">
+                                Contact Me
+                        </div>
+                        </div>
+                        <ContactMeForm createToast={(options) => this.props.createToast(options)} />
+                        <div className="cm-download-resume">
+                            <Button variant="contained" color="primary" onClick={() => this.downloadResume()}>
+                                Resume.pdf
+                            <GetAppIcon />
+                            </Button>
                         </div>
                     </div>
-                    <ContactMeForm createToast={(options) => this.props.createToast(options)}/>
-                    <div className="cm-download-resume">
-                        <Button variant="contained" color="primary" onClick={() => this.downloadResume()}>
-                            Resume.pdf
-                            <GetAppIcon />
-                        </Button>
+                    <div className="cm-mw-container">
+                        <div className="cm-mw-text">
+                            Made With
+                        </div>
+                        <div className="cm-mw-icon-row">
+                            <img src={awsSes} alt="ses" className="cm-mw-icon" />
+                            <div className="cm-mw-plus">+</div>
+                            <img src={awsAmplify} alt="amplify" className="cm-mw-icon" />
+                            <div className="cm-mw-plus">+</div>
+                            <img src={reactImg} alt="react" className="cm-mw-icon" />
+                            <div className="cm-mw-plus">+</div>
+                            <img src={awsLambdaImg} alt="lambda" className="cm-mw-icon" />
+                        </div>
+                        <div style={{height: "5%"}} />
                     </div>
                 </div>
             </Fragment>

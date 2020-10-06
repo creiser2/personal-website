@@ -14,6 +14,8 @@ import awsEc2Img from "../assets/aws-ec2.png";
 import awsLambdaImg from "../assets/lambda.png";
 import awsRdsImg from "../assets/aws-rds.png";
 import herokuImg from "../assets/heroku.png";
+import awsAmplify from "../assets/aws-amplify.png";
+import awsSes from "../assets/amazon-ses.png";
 
 export {
     reactImg,
@@ -31,5 +33,7 @@ export {
     awsEc2Img,
     awsLambdaImg,
     awsRdsImg,
-    herokuImg 
+    herokuImg,
+    awsAmplify,
+    awsSes 
 }
