@@ -85,7 +85,7 @@ class ContactMeForm extends Component {
         }
     }
 
-    handleSubmit = (e) => {
+    handleSubmit = async (e) => {
         e.preventDefault()
         this.setState({
             errors: {
@@ -125,16 +125,28 @@ class ContactMeForm extends Component {
             ...this.state,
             errors: errors
         },
-            this.sendEmail
+            await this.sendEmail
         )
     }
 
-    sendEmail = () => {
+    sendEmail = async () => {
         if(this.state.errors.emailOrPhone || this.state.errors.email || this.state.errors.phone) {
             this.props.createToast({ message: "Form Failure", type: "error" });
         } else {
-            this.props.createToast({ message: `Email sent!`, type: "success" });
-            this.resetForm();
+            var config = {
+                method: 'post',
+                url: 'https://gzuxzlqey9.execute-api.us-east-1.amazonaws.com/default/sendEmail',
+                data: JSON.stringify({...this.state.form}),
+                headers: {}
+            };
+
+            try {
+                await axios(config)
+                this.resetForm();
+                this.props.createToast({ message: `Email sent!`, type: "success" });
+            } catch(err) {
+                this.props.createToast({message: 'Email Failed To Send', type: "error"})
+            }
         }
     }
 
@@ -272,6 +284,7 @@ class ContactMeForm extends Component {
                         label="Name"
                         variant="outlined"
                         value={this.state.form.name}
+                        className={"cm-form-box"}
                         id="name"
                     />
                     <CssTextField
@@ -280,6 +293,7 @@ class ContactMeForm extends Component {
                         label="Email Address"
                         variant="outlined"
                         error={this.state.errors.email || this.state.errors.emailOrPhone}
+                        className={"cm-form-box"}
                         helperText={this.getEmailError()}
                         value={this.state.form.email}
                         id="email"
@@ -290,6 +304,7 @@ class ContactMeForm extends Component {
                         role="presentation"
                         label="Phone Number"
                         variant="outlined"
+                        className={"cm-form-box"}
                         error={this.state.errors.phone || this.state.errors.emailOrPhone}
                         helperText={this.state.errors.phone ? "Invalid phone number" : ""}
                         value={this.state.form.phoneNumber}

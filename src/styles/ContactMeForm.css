@@ -11,5 +11,9 @@
 }
 
 .cm-message-form {
-    width: 30%;
+    width: 50%;
+}
+
+.cm-form-box { 
+    width: 25%;
 }

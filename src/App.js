@@ -96,7 +96,6 @@ function App() {
   }
 
   function createToast(options) {
-    debugger;
     setSnackMessage(options.message);
     setSnackVariant(options.type);
     setSnackOpen(true);

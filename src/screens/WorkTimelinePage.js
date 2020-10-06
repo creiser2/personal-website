@@ -29,7 +29,6 @@ class WorkTimelinePage extends Component {
     }
 
     goToUrl = (url) => {
-        debugger;
         window.open(url)
     }
 
