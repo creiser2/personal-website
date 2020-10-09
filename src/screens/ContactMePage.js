@@ -32,21 +32,6 @@ class ContactMePage extends Component {
                             </Button>
                         </div>
                     </div>
-                    <div className="cm-mw-container">
-                        <div className="cm-mw-text">
-                            Made With
-                        </div>
-                        <div className="cm-mw-icon-row">
-                            <img src={awsSes} alt="ses" className="cm-mw-icon" />
-                            <div className="cm-mw-plus">·</div>
-                            <img src={awsAmplify} alt="amplify" className="cm-mw-icon" />
-                            <div className="cm-mw-plus">·</div>
-                            <img src={reactImg} alt="react" className="cm-mw-icon" />
-                            <div className="cm-mw-plus">·</div>
-                            <img src={awsLambdaImg} alt="lambda" className="cm-mw-icon" />
-                        </div>
-                        <div style={{height: "5%"}} />
-                    </div>
                 </div>
             </Fragment>
         )

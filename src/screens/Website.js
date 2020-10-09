@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component, Fragment } from 'react';
 
-import { LandingPage, AboutMePage, WorkTimelinePage, ContactMePage } from "../indices/PagesIndex";
+import { LandingPage, AboutMePage, WorkTimelinePage, ContactMePage, MadeWithBar } from "../indices/PagesIndex";
 
 class Website extends Component {
     constructor(props) {
@@ -47,49 +47,9 @@ class Website extends Component {
         }
     }
 
-    // get the scroll height and the tops of all refs, and see if we are close to one to animate to
-    handleScroll = () => {
-        const lastScrollY = window.scrollY;
-        const threshold = 250;
-        
-        if (Math.abs(this.state.refs.landingPageRef.current._reactInternalFiber.child.stateNode.offsetTop - lastScrollY) <= threshold) {
-            this.scrollToLandingPage()
-        } else if (Math.abs(this.state.refs.aboutMePageRef.current._reactInternalFiber.child.stateNode.offsetTop - lastScrollY) <= threshold) {
-            this.scrollToAboutMe()
-        } else if (Math.abs(this.state.refs.workTimelinePageRef.current._reactInternalFiber.child.stateNode.offsetTop - lastScrollY) <= threshold) {
-            this.scrollToWorkTimelinePage()
-        } else if (Math.abs(this.state.refs.contactMePageRef.current._reactInternalFiber.child.stateNode.offsetTop - lastScrollY) <= threshold) {
-            this.scrollToContactMePage()
-        }
-    }
-
-    scrollToLandingPage = () => {
-        window.scrollTo({
-            top: this.landingPageRef.current._reactInternalFiber.child.stateNode.offsetTop,
-            left: 0,
-            behavior: 'smooth'
-        }); 
-    }
-
     scrollToAboutMe() {
         window.scrollTo({
             top: this.aboutMePageRef.current._reactInternalFiber.child.stateNode.offsetTop,
-            left: 0,
-            behavior: 'smooth'
-        });
-    }
-    
-    scrollToWorkTimelinePage = () => {
-        window.scrollTo({
-            top: this.workTimelinePageRef.current._reactInternalFiber.child.stateNode.offsetTop,
-            left: 0,
-            behavior: 'smooth'
-        });
-    }
-
-    scrollToContactMePage = () => {
-        window.scrollTo({
-            top: this.contactMePageRef.current._reactInternalFiber.child.stateNode.offsetTop,
             left: 0,
             behavior: 'smooth'
         });
@@ -102,6 +62,7 @@ class Website extends Component {
                 <AboutMePage ref={this.aboutMePageRef} />
                 <WorkTimelinePage ref={this.workTimelinePageRef}/>
                 <ContactMePage createToast={(options) => this.props.createToast(options)} ref={this.contactMePageRef}/>
+                <MadeWithBar />
             </Fragment>
         )
     }

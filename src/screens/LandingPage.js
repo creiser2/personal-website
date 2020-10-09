@@ -3,6 +3,7 @@ import { Fragment, Component } from "react";
 import '../styles/LandingPage.css';
 import Chevron from "../shared/Chevron";
 import Constellations from "../shared/Constellations";
+import astronautOne from "../assets/homepage-bg-astronaut.png";
 
 class LandingPage extends Component {
     render() {
@@ -10,6 +11,7 @@ class LandingPage extends Component {
             <Fragment>
                 <div className="landing-page-container"> 
                     <Constellations page={1} />
+                    <img src={astronautOne} alt="astronaut" className="astronaut-one" />
                     <div className="center">
                         <div className="topSpacer" />
                         <div className='header sf-semibold'>
