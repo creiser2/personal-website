@@ -67,6 +67,23 @@
     justify-content: center;
 }
 
+.astronaut-two {
+    animation: MoveUpDownTwo 3s ease infinite;
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    left: -70%;
+}
+
+@keyframes MoveUpDownTwo {
+  0%, 100% {
+    bottom: 100px;
+  }
+  50% {
+    bottom: 110px;
+  }
+}
+
 
 /* phones */
 @media only screen and (max-width: 375px) {
@@ -76,5 +93,22 @@
 
     .MuiFormControl-root {
         width: 100%;
+    }
+
+    .astronaut-two {
+        animation: MoveUpDownTwo 3s ease infinite;
+        position: absolute;
+        width: 100%;
+        bottom: 20px;
+        left: -70%;
+    }
+
+    @keyframes MoveUpDownTwo {
+        0%, 100% {
+            bottom: 20px;
+        }
+        50% {
+            bottom: 25px;
+        }
     }
 }

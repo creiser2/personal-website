@@ -5,7 +5,7 @@ import "../styles/ContactMePage.css";
 import Button from '@material-ui/core/Button';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import Constellations from "../shared/Constellations";
-import { awsSes, awsAmplify, reactImg, awsLambdaImg } from "../indices/StackImagesIndex";
+import astronautTwo from "../assets/astronaut-2.png";
 
 class ContactMePage extends Component {
     downloadResume = () => {
@@ -17,6 +17,7 @@ class ContactMePage extends Component {
             <Fragment>
                 <div className="cm-container">
                     <Constellations page={4}/>
+                    <img src={astronautTwo} alt="astronaut-two" className="astronaut-two" />
                     <div className="cm-body-container">
                         <div className="wt-header-holder">
                             <div style={{ height: '25%' }} />

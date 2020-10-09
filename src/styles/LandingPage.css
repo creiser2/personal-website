@@ -60,18 +60,20 @@
 
 .astronaut-one {
     animation: MoveUpDown 3s ease infinite;
-    width: 1500px;
-    margin-top: 30px;
-    margin-left: -190px;
+    max-width: 1500px;
+    min-width: 1000px;
+    bottom: 0px;
+    top: 20px;
+    right: 228px;
     position: absolute;
 }
 
 @keyframes MoveUpDown {
   0%, 100% {
-    margin-top: 30px;
+    top: 20px;
   }
   50% {
-    margin-top: 25px;
+    top: 10px;
   }
 }
 
@@ -88,9 +90,23 @@
     }
 
     .astronaut-one {
-        width: 610px;
-        margin-left: -238px;
-        margin-top: 256px;
+        animation: MoveUpDown 3s ease infinite;
+        min-width: none;
+        max-width: none;
+        width: 847px;
+        right: -16px;
+        top: 180px;
+        /* margin-left: -203px; */
         position: absolute;
+    }
+
+
+    @keyframes MoveUpDown {
+        0%, 100% {
+            top: 180px;
+        }
+        50% {
+            top: 170px;
+        }
     }
 }
