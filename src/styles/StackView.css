@@ -41,11 +41,45 @@
 
 .stack-cell-text {
     color: white;
-    font-size: 1.8vw;
+    font-size: 1.0rem;
+    text-align: center;
 }
 
 .stack-dev-deploy-container {
     width: 100%;
     height: 100%;
     position: relative;
+}
+
+
+/* phones */
+@media only screen and (max-width: 375px) {
+    .sc-large-img {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        width: 100%;
+    }
+
+    .sc-small-img {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        width: 80%;
+    }
+
+    .sc-medium-img {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        width: 90%;
+    }
+
+    .sc-small-medium-img {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        width: 85%; 
+    }
+
+    .stack-cell-text {
+        color: white;
+        font-size: 1.0rem;
+    }
 }

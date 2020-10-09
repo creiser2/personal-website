@@ -38,11 +38,11 @@ class ContactMePage extends Component {
                         </div>
                         <div className="cm-mw-icon-row">
                             <img src={awsSes} alt="ses" className="cm-mw-icon" />
-                            <div className="cm-mw-plus">+</div>
+                            <div className="cm-mw-plus">·</div>
                             <img src={awsAmplify} alt="amplify" className="cm-mw-icon" />
-                            <div className="cm-mw-plus">+</div>
+                            <div className="cm-mw-plus">·</div>
                             <img src={reactImg} alt="react" className="cm-mw-icon" />
-                            <div className="cm-mw-plus">+</div>
+                            <div className="cm-mw-plus">·</div>
                             <img src={awsLambdaImg} alt="lambda" className="cm-mw-icon" />
                         </div>
                         <div style={{height: "5%"}} />

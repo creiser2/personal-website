@@ -78,7 +78,7 @@ function WorkTimelineCarousel(props) {
                 <img src={FlatironLogo} alt="flatiron-logo" className="wt-carousel-logo" />
                 <div className="wt-carousel-main">
                     <div className="wt-carousel-vertical">
-                        <div className="wt-carousel-app-name sf-light">
+                        <div className="wt-carousel-description sf-light">
                             15-Week Coding Bootcamp
                         </div> 
                         <div style={{height: '15%'}} />

@@ -13,7 +13,7 @@
 }
 
 .am-header {
-    font-size: 4vw;
+    font-size: 4rem;
     color: #FFF;
     text-align: center;
     height: 40%;
@@ -26,7 +26,7 @@
 .am-subtitle {
     color: #FFF;
     text-align: center;
-    font-size: 2vw;
+    font-size: 2rem;
 }
 
 .am-button-container {
@@ -100,4 +100,33 @@
 .stack {
     width: 70%;
     height: 80%;
+}
+
+
+/* phones */
+@media only screen and (max-width: 375px) {
+    .am-subtitle {
+        color: #FFF;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .profile-picture {
+        display: none;
+    }
+
+    .stack {
+        width: 100%;
+    }
+
+    .am-spacer-3 {
+        display: none;
+    }
+
+    .am-header {
+        font-size: 3rem;
+        color: #FFF;
+        text-align: center;
+        height: 40%;
+    }
 }

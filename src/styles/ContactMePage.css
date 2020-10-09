@@ -28,6 +28,7 @@
     flex-direction: column;
     position: absolute;
     align-items: center;
+    overflow: hidden;
 }
 
 .cm-mw-icon-row {
@@ -40,6 +41,7 @@
 
 .cm-mw-icon {
     width: 70px;
+    height: 60px;
     padding-bottom: 7px;
 }
 
@@ -52,4 +54,17 @@
 
 .cm-mw-plus {
     font-size: 3rem;
+    opacity: 0.7;
+}
+
+
+/* phones */
+@media only screen and (max-width: 375px) {
+    .cm-download-resume {
+        width: 38%;
+    }
+
+    .MuiFormControl-root {
+        width: 100%;
+    }
 }
