@@ -61,27 +61,27 @@ class DeploymentStackView extends Component {
             <div className="sv-row-container">
                 <div className="sv-col-container">
                     <div style={{ height: '25%' }} />
-                    <div className="sf-light stack-cell-text">Apple App Store</div>
+                    <div className="ms-light stack-cell-text">Apple App Store</div>
                     <img src={appStoreImg} alt="app-store" className="sc-large-img" />
                 </div>
                 <div className="sv-col-container">
                     <div style={{ height: '55%' }} />
                     <img src={awsApiGatewayImg} alt="aws-api-gateway" className="sc-large-img" />
-                    <div className="sf-light stack-cell-text">Aws Api Gateway</div>
+                    <div className="ms-light stack-cell-text">Aws Api Gateway</div>
                 </div>
                 <div className="sv-col-container">
                     <div style={{ height: '15%' }} />
-                    <div className="sf-light stack-cell-text">Aws Ec2</div>
+                    <div className="ms-light stack-cell-text">Aws Ec2</div>
                     <img src={awsEc2Img} alt="ec2" className="sc-medium-img" />
                 </div>
                 <div className="sv-col-container">
                     <div style={{ height: '55%' }} />
-                    <div className="sf-light stack-cell-text">aws lambda</div>
+                    <div className="ms-light stack-cell-text">aws lambda</div>
                     <img src={awsLambdaImg} alt="lambda" className="sc-medium-img" />
                 </div>
                 <div className="sv-col-container">
                     <img src={awsRdsImg} alt="rds" className="sc-large-img" />
-                    <div className="sf-light stack-cell-text">aws rds</div>
+                    <div className="ms-light stack-cell-text">aws rds</div>
                 </div>
             </div>
         )
@@ -92,16 +92,16 @@ class DeploymentStackView extends Component {
             <div className="sv-row-container">
                 <div className="sv-col-container">
                     <div style={{ height: '25%' }} />
-                    <div className="sf-light stack-cell-text">Apple App Store</div>
+                    <div className="ms-light stack-cell-text">Apple App Store</div>
                     <img src={appStoreImg} alt="app-store" className="sc-small-medium-img" />
                 </div>
                 <div className="sv-col-container">
                     <div style={{ height: '65%' }} />
-                    <div className="sf-light stack-cell-text">Firestore</div>
+                    <div className="ms-light stack-cell-text">Firestore</div>
                     <img src={firebaseImg} alt="fb" className="sc-small-medium-img" />
                 </div>
                 <div className="sv-col-container">
-                    <div className="sf-light stack-cell-text">Heroku</div>
+                    <div className="ms-light stack-cell-text">Heroku</div>
                     <img src={herokuImg} alt="heroku" className="sc-small-medium-img" />
                     <div style={{ height: '65%' }} />
                 </div>

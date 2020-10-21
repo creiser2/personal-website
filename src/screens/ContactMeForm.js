@@ -107,19 +107,16 @@ class ContactMeForm extends Component {
             errors.emailOrPhone = true
         } 
 
-        // non blank phone number check
-        else if (this.state.form.phoneNumber !== "") {
-            if (!/\(\d{3}\)\-\d{3}\-\d{4}/.test(this.state.form.phoneNumber)) {
+        // non blank phone number and email check
+        else  {
+            if (!/\(\d{3}\)-\d{3}-\d{4}/.test(this.state.form.phoneNumber)) {
                 errors.phone = true
             }
-        }
-
-        // non blank email check
-        else if(this.state.form.email !== "") {
             if (!/\w+@\w+\.\w+/.test(this.state.form.email)) {
                 errors.email = true;
             }
         }
+
 
         this.setState({
             ...this.state,

@@ -51,7 +51,7 @@ class WorkTimelinePage extends Component {
                     <Constellations page={3}/>
                     <div className="wt-header-holder">
                         <div style={{height: '25%'}} />
-                        <div className="sf-semibold am-header">
+                        <div className="ms-semibold am-header">
                             Work Timeline
                         </div>
                     </div>
@@ -62,7 +62,7 @@ class WorkTimelinePage extends Component {
                         :
                             <Chevron className={"wt-left-chevron"} clickEvent={() => this.leftChevronClicked()} />
                         }
-                        <div className="wt-time-container sf-thin">
+                        <div className="wt-time-container ms-thin">
                             {this.state.displays[this.state.window].time}
                         </div>
                         {this.state.window !== this.state.displays.length -1 ?

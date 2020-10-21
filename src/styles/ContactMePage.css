@@ -86,7 +86,7 @@
 
 
 /* phones */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 900px) {
     .cm-download-resume {
         width: 38%;
     }

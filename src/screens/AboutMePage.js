@@ -32,20 +32,20 @@ class AboutMePage extends Component {
                     <Constellations page={2}/>
                     <div className="am-text-holder">
                         <div className="am-spacer-1"></div>
-                        <div className="sf-semibold am-header">
+                        <div className="ms-semibold am-header">
                             About Me
                         </div>
-                        <div className="sf-thin-italic am-subtitle">
+                        <div className="ms-thin-italic am-subtitle">
                             I am a software engineer who has a passion for building the best
                         </div>
-                        <div className="sf-thin-italic am-subtitle">
+                        <div className="ms-thin-italic am-subtitle">
                             possible product for the end user.
                         </div>
                     </div>
                     <div className="am-button-container">
                         {this.state.developmentClicked ? 
                             <Fragment>
-                                <div id="development" className="am-button-filled sf-light" onClick={() => this.developmentClick()}>
+                                <div id="development" className="am-button-filled ms-light" onClick={() => this.developmentClick()}>
                                     Development
                                 </div>
                                 <div className="am-spacer-2"></div>
@@ -55,7 +55,7 @@ class AboutMePage extends Component {
                             <Fragment>
                                 <CustomButtonHolder text={"Development"} clickEvent={() => this.developmentClick()} />
                                 <div className="am-spacer-2"></div>
-                                <div id="deployment" className="am-button-filled sf-light" onClick={() => this.deploymentClick()}>
+                                <div id="deployment" className="am-button-filled ms-light" onClick={() => this.deploymentClick()}>
                                     Deployment
                                 </div>
                             </Fragment>

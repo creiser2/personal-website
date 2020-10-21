@@ -64,21 +64,21 @@ class DevelopmentStackView extends Component {
                 <div className="sv-col-container">
                     <div style={{ height: '25%' }} />
                     <img src={reactImg} alt="react" className="sc-large-img"/>
-                    <div className="sf-light stack-cell-text">frontend</div>
+                    <div className="ms-light stack-cell-text">frontend</div>
                 </div>
                 <div className="sv-col-container">
-                    <div className="sf-light stack-cell-text">state management</div>
+                    <div className="ms-light stack-cell-text">state management</div>
                     <img src={reduxImg} alt="redux" className="sc-small-img"/>
                     <div style={{ height: '10%' }} />
                 </div>
                 <div className="sv-col-container">
                     <div style={{ height: '55%' }} />
                     <img src={nodeImg} alt="node" className="sc-small-img"/>
-                    <div className="sf-light stack-cell-text">backend</div>
+                    <div className="ms-light stack-cell-text">backend</div>
                 </div>
                 <div className="sv-col-container">
                     <img src={pgImg} alt="pg" className="sc-medium-img"/>
-                    <div className="sf-light stack-cell-text">data store</div>
+                    <div className="ms-light stack-cell-text">data store</div>
                 </div>
             </div>
         )
@@ -89,12 +89,12 @@ class DevelopmentStackView extends Component {
             <div className="sv-row-container">
                 <div className="sv-col-container">
                     <div style={{ height: '45%' }} />
-                    <div className="sf-light stack-cell-text">frontend</div>
+                    <div className="ms-light stack-cell-text">frontend</div>
                     <img src={swiftImg} alt="swift" className="sc-small-img" />
                 </div>
                 <div className="sv-col-container">
                     <img src={firebaseImg} alt="fb" className="sc-large-img" />
-                    <div className="sf-light stack-cell-text">backend</div>
+                    <div className="ms-light stack-cell-text">backend</div>
                 </div>
             </div>
         )
@@ -106,23 +106,23 @@ class DevelopmentStackView extends Component {
                 <div className="sv-col-container">
                     <div style={{ height: '25%' }} />
                     <img src={vueImg} alt="vue" className="sc-large-img" />
-                    <div className="sf-light stack-cell-text">frontend</div>
+                    <div className="ms-light stack-cell-text">frontend</div>
                 </div>
                 <div className="sv-col-container">
-                    <div className="sf-light stack-cell-text">state management</div>
+                    <div className="ms-light stack-cell-text">state management</div>
                     <img src={vuexImg} alt="vuex" className="sc-small-img" />
                     <div style={{ height: '35%' }} />
                     <img src={nodeImg} alt="node" className="sc-small-img" />
-                    <div className="sf-light stack-cell-text">middleware</div>
+                    <div className="ms-light stack-cell-text">middleware</div>
                 </div>
                 <div className="sv-col-container">
                     <img src={railsImg} alt="rails" className="sc-medium-img" />
-                    <div className="sf-light stack-cell-text">backend</div>
+                    <div className="ms-light stack-cell-text">backend</div>
                 </div>
                 <div className="sv-col-container">
                     <div style={{ height: '65%' }} />
                     <img src={mySqlImg} alt="mysql" className="sc-medium-img" />
-                    <div className="sf-light stack-cell-text">data store</div>
+                    <div className="ms-light stack-cell-text">data store</div>
                 </div>
             </div>
         )

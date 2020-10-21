@@ -8,7 +8,7 @@ class MadeWithBar extends Component {
         return (
             <Fragment>
                 <div className="mw-bar">
-                    <div className="cm-mw-text">
+                    <div className="cm-mw-text ms-thin">
                         Made With
                     </div>
                     <div className="cm-mw-icon-row">

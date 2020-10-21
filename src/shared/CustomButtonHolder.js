@@ -23,11 +23,11 @@ class CustomButtonHolder extends Component {
         return (
             <Fragment>
                 {this.state.mouseOver ?
-                    <div id="deployment" className="am-button-filled sf-light" onClick={() => this.props.clickEvent()} onMouseLeave={() => this.mouseLeave()} onMouseEnter={() => this.mouseEnter()}>
+                    <div id="deployment" className="am-button-filled ms-light" onClick={() => this.props.clickEvent()} onMouseLeave={() => this.mouseLeave()} onMouseEnter={() => this.mouseEnter()}>
                         {this.props.text}
                     </div>
                 :
-                    <div id="development" className="am-button-hollow sf-light" onClick={() => this.props.clickEvent()} onMouseLeave={() => this.mouseLeave()} onMouseEnter={() => this.mouseEnter()}>
+                    <div id="development" className="am-button-hollow ms-light" onClick={() => this.props.clickEvent()} onMouseLeave={() => this.mouseLeave()} onMouseEnter={() => this.mouseEnter()}>
                         {this.props.text}
                     </div>
                 }

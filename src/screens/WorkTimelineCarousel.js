@@ -78,7 +78,7 @@ function WorkTimelineCarousel(props) {
                 <img src={FlatironLogo} alt="flatiron-logo" className="wt-carousel-logo" />
                 <div className="wt-carousel-main">
                     <div className="wt-carousel-vertical">
-                        <div className="wt-carousel-description sf-light">
+                        <div className="wt-carousel-description ms-light">
                             15-Week Coding Bootcamp
                         </div> 
                         <div style={{height: '15%'}} />
@@ -90,7 +90,7 @@ function WorkTimelineCarousel(props) {
                         <div style={{ height: '15%' }} />
                         <div className="wt-carousel-special-icon-holder">
                             <img src={reactImg} alt="react" className="wt-carousel-icon"/>
-                            <div className="sf-thin wt-carousel-plus">
+                            <div className="ms-thin wt-carousel-plus">
                                 +
                             </div>
                             <img src={railsImg} alt="rails" className="wt-carousel-icon"/>
@@ -98,7 +98,7 @@ function WorkTimelineCarousel(props) {
                         <div style={{ height: '15%' }} />
                     </div>
                 </div>
-                <div className="wt-carousel-app-name sf-light" onClick={() => props.goToUrl("https://flatironschool.com/career-courses/coding-bootcamp")}>
+                <div className="wt-carousel-app-name ms-light" onClick={() => props.goToUrl("https://flatironschool.com/career-courses/coding-bootcamp")}>
                     Full Stack Web Application Development
                 </div>
             </Fragment>
@@ -114,7 +114,7 @@ function WorkTimelineCarousel(props) {
                     <img src={JuiceSecondDisplay} className="wt-carousel-display-jr-2" alt="juice-display-2" />
                     <img src={JuiceThirdDisplay} className="wt-carousel-display-jr-3" alt="juice-display-3" />
                 </div>
-                <div className="wt-carousel-app-name sf-light" onClick={() => props.goToUrl("https://apps.apple.com/us/app/juice-reel/id1527960097")}>
+                <div className="wt-carousel-app-name ms-light" onClick={() => props.goToUrl("https://apps.apple.com/us/app/juice-reel/id1527960097")}>
                     Juice Reel
                 </div>
             </Fragment>
@@ -130,7 +130,7 @@ function WorkTimelineCarousel(props) {
                     <img src={CranberrySecondDisplay} className="wt-carousel-display-cq-2" alt="cranberry-display-2" />
                     <img src={CranberryThirdDisplay} className="wt-carousel-display-cq-3" alt="cranberry-display-3" />
                 </div>
-                <div className="wt-carousel-app-name sf-light" onClick={() => props.goToUrl("https://apps.apple.com/us/app/cranberry-queues/id1484019324")}>
+                <div className="wt-carousel-app-name ms-light" onClick={() => props.goToUrl("https://apps.apple.com/us/app/cranberry-queues/id1484019324")}>
                     Cranberry Queues
                 </div>
             </Fragment>

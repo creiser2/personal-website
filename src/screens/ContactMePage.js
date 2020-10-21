@@ -21,7 +21,7 @@ class ContactMePage extends Component {
                     <div className="cm-body-container">
                         <div className="wt-header-holder">
                             <div style={{ height: '25%' }} />
-                            <div className="sf-semibold am-header">
+                            <div className="ms-semibold am-header">
                                 Contact Me
                         </div>
                         </div>
